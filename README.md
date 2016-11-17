@@ -14,6 +14,23 @@ You should begin by using one of the below instances that provide
 excellent processing power, especially considering that the size of the dataset for
 P2 is relatively small.
 
+#### What is a vCPU unit?
+From Amazon:
+>"The amount of CPU that is allocated to a particular instance is expressed in terms of these EC2 Compute Units. We use several benchmarks and tests to manage the consistency and predictability of the performance of an EC2 Compute Unit. One EC2 Compute Unit provides the equivalent CPU capacity of a 1.0-1.2 GHz 2007 Opteron or 2007 Xeon processor."
+
+for `c4.large`: that's 8 units, i.e. 8 * 1.0 Ghz equaling 8.0 Ghz roughly
+and since it's 2 cores and TensorFlow is optimized for multi-core you would have
+`2  8.0 Ghz processors` roughly
+
+ with your standard intel i5 2.5gbz 4 core laptop, it's `4 * 2.5Ghz processors` which is about half what the `c4.large` gets you.
+
+So in summary
+If you get a c4.large you are getting roughly 2x the compute power of a standard i5 processor.
+If you go for the c4.xlarge you will get roughly 4x the compute power of a standard i5.
+
+
+## GPU details
+
 AWS also limits GPU access to new customers.  If your account is new, your limit is `Zero` and you
 need to request a limit increase which may take a few days.
 
@@ -26,7 +43,8 @@ and attach it to the GPU instance and not loose as step! (Tutorial for that is c
 
 You maybe tempted to use a c3 class instance but rememeber that EBS volumes are detachable and can be re-used on your GPU instance
 
-# Instance Specfications and Pricing
+
+#CPU Instance Specfications and Pricing
 
 |Instance|Memory|Compute units|Cores|
 |---|---|---|---|
