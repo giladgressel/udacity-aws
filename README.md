@@ -46,7 +46,7 @@ Once you have singed up for AWS and are logged into your account, click the blue
 
 Scroll down to the bottom of the page with the list of Amazon Machine Images or AMI's and select the `Ubuntu 14.04`
 
-Select to the `c4.large` or `c4.xlarge` and continue.  You will not have to change any thing from the next screen.  Click `add storage`.
+Select the `c4.large` or `c4.xlarge` and continue.  You will not have to change any thing from the next screen.  Click `add storage`.
 
 Change the `8GB` to `20GB`.  Do not go crazy with storage.  `20GB` is more than plenty for this course and larger EBS volumes cost money.
 
