@@ -52,10 +52,12 @@ Change the `8GB` to `20GB`.  Do not go crazy with storage.  `20GB` is more than 
 
 Click `tag instance`.  The tag is just a name that will appear in the dashboard and can alwasy be chagned later.  Click `configure security group`.
 
-In the security group, ensure `create new group` is selected.  Port `22` should be auto-filled in by AWS.  Ensue that `MyIP` is selected from the drop down.  This is extra security ensuring that only your IP can remote access your instance.
+In the security group, ensure `create new group` is selected.  Port `22` should be auto-filled in by AWS.  Ensure that `MyIP` is selected from the drop down.  This is extra security ensuring that only your IP can remote access your instance.
 
 ### Note:
-if your IP changes very frequently; like once a day, do no select that, rather select `anywhere`.  If your IP does change frequently but you still want the extra security please see http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html
+If your IP changes very frequently; once a day, do no select that, rather select `anywhere`.
+
+If your IP does change frequently but you still want the extra security please see http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html
 
 Click `review and launch`, then `launch`.  Enter a keypair name and `download` the keypair.  
 
@@ -72,7 +74,7 @@ For windows users to access your instance via SSH please see http://docs.aws.ama
 For Mac / Linux users
 ```
 $ mv ~/Downloads/<your-key.pem> ~/.ssh/
-$ chmod 400 ~/.ssh/<your-key.pme>
+$ chmod 400 ~/.ssh/<your-key.pem>
 $ ssh -i ~/.ssh/<your-key.pem> ubuntu@IP-of-instance
 ```
 # Setting Up TensorFlow on your new instance
