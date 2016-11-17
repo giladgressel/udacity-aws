@@ -76,3 +76,4 @@ $ chmod 400 ~/.ssh/<your-key.pme>
 $ ssh -i ~/.ssh/<your-key.pem> ubuntu@IP-of-instance
 ```
 # Setting Up TensorFlow on your new instance
+coming soon: shell script you can run 
